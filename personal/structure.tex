@@ -1,0 +1,133 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+
+\usepackage{microtype} % Better typography
+
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+
+\usepackage[hang, small, labelfont=bf, up, textfont=it]{caption} % Custom captions under/above tables and figures
+
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+
+\usepackage{graphicx} % Required for adding images
+
+\usepackage{enumitem} % Required for customising lists
+\setlist{noitemsep} % Remove spacing between bullet/numbered list elements
+
+\usepackage{sectsty} % Enables custom section titles
+\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands (Helvetica)
+
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage{XCharter} % Use the XCharter font
+
+%----------------------------------------------------------------------------------------
+%	MARGINS AND SPACING
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions
+
+\geometry{
+	top=1cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	left=2cm, % Left margin
+	right=2cm, % Right margin
+	includehead, % Include space for a header
+	includefoot, % Include space for a footer
+	% showframe, % Uncomment to show how the type block is set on the page
+}
+
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{XCharter} % Use the XCharter font
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\pagestyle{fancy} % Enables the custom headers/footers
+\fancypagestyle{plain}%{
+%\fancyfoot[LE, RO]{Apurba Paul}
+%\fancyfoot[LO, RE]{Using fancyhdr}}
+
+
+\renewcommand{\headrulewidth}{0.0pt} % No header rule
+\renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}} % Removes the section number from the header when \leftmark is used
+
+%\nouppercase\leftmark % Add this to one of the lines below if you want a section title in the header/footer
+
+%% Headers
+\lhead{} % Left header
+\chead{}
+\rhead{} % Right header
+% \chead{\textit{\thetitle}} % Center header - currently printing the article title
+
+
+% Footers
+\lfoot{} % Left footer
+\cfoot{} % Center footer
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % Right footer, "Page 1 of 2"
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\authorstyle}[1]{{\large\usefont{OT1}{phv}{b}{n}\color{DarkRed}#1}} % Authors style (Helvetica)
+
+\newcommand{\institution}[1]{{\footnotesize\usefont{OT1}{phv}{m}{sl}\color{Black}#1}} % Institutions style (Helvetica)
+
+\usepackage{titling} % Allows custom title configuration
+
+\usepackage{titlesec} % Set title color
+
+\titleformat{\section}
+{\color{DarkRed}\normalfont\huge\bfseries}
+{\color{DarkRed}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{DarkRed}\normalfont\LARGE\bfseries}
+{\color{DarkRed}\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{DarkRed}\normalfont\Large\bfseries}
+{\color{DarkRed}\thesubsubsection}{1em}{}
+
+\usepackage{xcolor} % Package tdo madify table of contencts color
+
+\AtBeginDocument{ % to modify table of contents text size
+  \addtocontents{toc}{\Large}
+  \addtocontents{lof}{\Large}
+}
+
+%----------------------------------------------------------------------------------------
+%	WATERMARK
+%----------------------------------------------------------------------------------------
+
+% \usepackage{draftwatermark}
+% \SetWatermarkText{\includegraphics{watermark.png}}
+% \SetWatermarkScale{0.5}
+
+\usepackage{background}
+\backgroundsetup{contents=\includegraphics{watermark.png}, scale=1, opacity=0.25, angle=0}
+
+
+
+

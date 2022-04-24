@@ -1,7 +1,9 @@
 \documentclass[10pt, a4paper]{article} % basic document settings
 \input{structure.tex} % Specifies the document structure and loads requires packages
 
-\usepackage{tabularx}
+\usepackage{tabularx} % package for formating tables
+
+\usepackage{blindtext} % package for random text on templates
 
 %----------------------------------------------------------------------------------------
 %	TITLE
@@ -10,8 +12,8 @@
 \title{\begin{flushleft}\color{DarkRed} \textbf{\huge{NGINX}}\end{flushleft}} % The article title title}{{\color{DarkRed}}
 
 \author{
-	\authorstyle{Daniel Fariña Sande\textsuperscript{1}} \\ \\
-	\textsuperscript{1}\institution{Administrador de redes y sitemas. Especialista en ciberseguridad en Tecdesoft.} % Institution 1
+	\authorstyle{One Random Guy\textsuperscript{1}} \\ \\
+	\textsuperscript{1}\institution{One Random Job.} % Institution 1
 }
 %----------------------------------------------------------------------------------------
 %	DOCUMENT START
@@ -29,7 +31,7 @@
     \label{fig:nginx1} % image label
 \end{figure}
 
-
+\newpage % ends content on current page
 
 \begin{table}[h!] % this is how tables with lines are introduced
     \begin{center} 
@@ -101,27 +103,33 @@
     \hline 
     cell7 & cell8 \\ 
     \hline 
-  \end{tabularx}
+\end{tabularx}
+
+\newpage % ends content on current page
 
 \begin{abstract}
     On this section we explain than this document has been created to develop LaTeX skills and document
     nginx configurations.On this section we explain than this document has been created to develop LaTeX skills and document
     nginx configurations.On this section we explain than this document has been created to develop LaTeX skills and document
     nginx configurations.
-    
-    On this section we explain than this document has been created to develop LaTeX skills and document
-    nginx configurations.On this section we explain than this document has been created to develop LaTeX skills and document
-    nginx configurations.On this section we explain than this document has been created to develop LaTeX skills and document
-    nginx configurations.
 \end{abstract}
 
+\newpage % ends content on current page
+
+\begingroup % start a TeX group
+\color{DarkRed}% or whatever color you wish to use
 \tableofcontents
+\endgroup   % end of TeX group
+
+\newpage % ends content on current page
+
 
 \section{Introduction} % this is how you create sections and subsections, numbered and unnumbered
 
 Hello world. This is the first section.
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+
 \section{Introduction}
 
 Hello world. This is the first section.
@@ -144,6 +152,11 @@ Nginx logo looks like figure \ref{fig:nginx1}, but if we want to reference this 
 \subsection{First Subsection}
 Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
 
+\subsubsection{First SubSubSection}
+
+Nginx logo looks like figure \ref{fig:nginx1}, but if we want to reference this form another page.Nginx logo looks like figure \ref{fig:nginx1}, but if we want to reference this form another page.
+Nginx logo looks like figure \ref{fig:nginx1}, but if we want to reference this form another page.Nginx logo looks like figure \ref{fig:nginx1}, but if we want to reference this form another page.
+
 \section{Second Section}
 
 Hello world. This is the second section.
@@ -153,7 +166,7 @@ Nginx logo looks like figure \ref{fig:nginx1}, but if we want to reference this 
 
 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 
-\subsection{First Subsection}
+\subsection{Second Subsection}
 
 Praesent imperdietmi nec ante. Donec ullamcorper, felis non sodales...
 
@@ -177,7 +190,7 @@ Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
     \end{tabular}
 \end{center}
 
-\begin{table}[h!]
+\begin{table}[ht!]
     \begin{center} % this is how tables with lines are introduced
         \begin{tabular}{ |c|c| }
         \hline

@@ -96,6 +96,27 @@
 
 \usepackage{titling} % Allows custom title configuration
 
+\usepackage{titlesec} % Set title color
+
+\titleformat{\section}
+{\color{DarkRed}\normalfont\huge\bfseries}
+{\color{DarkRed}\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\color{DarkRed}\normalfont\LARGE\bfseries}
+{\color{DarkRed}\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{DarkRed}\normalfont\Large\bfseries}
+{\color{DarkRed}\thesubsubsection}{1em}{}
+
+\usepackage{xcolor} % Package tdo madify table of contencts color
+
+\AtBeginDocument{ % to modify table of contents text size
+  \addtocontents{toc}{\Large}
+  \addtocontents{lof}{\Large}
+}
+
 %----------------------------------------------------------------------------------------
 %	WATERMARK
 %----------------------------------------------------------------------------------------
@@ -106,3 +127,7 @@
 
 \usepackage{background}
 \backgroundsetup{contents=\includegraphics{watermark.png}, scale=1, opacity=0.25, angle=0}
+
+
+
+
